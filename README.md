@@ -29,9 +29,16 @@ It can be started with a command similar to the following:
 java analyzer.Main ~/Temp ./resources/patterns.db
 ```
 
+Here is an example session:
+
+```
+Sample Word Document.doc: MS Office Word 2003
+Sample PDF Document.pdf: PDF document
+```
+
 The patterns.db file in the resource directory was supplied by JetBrains Academy and provides an example of a pattern file.
 
-This program has quite a lot of debug logging available for the Knuth–Morris–Pratt algorithm. It can be turned on by setting the Main.DEBUG_MODE flag to true.
+The program has quite a lot of debug logging available for the Knuth–Morris–Pratt algorithm. It can be turned on by setting the Main.DEBUG_MODE flag to true. When on, results from each step of the algorithm are displayed. This was very useful to me as I was not only testing the algorithm but also my circular buffer so it was useful to confirm things were working as expected. It can be useful to follow to visualize what the algorithm is doing.
 
 In support of the final phase, the program was hardcoded to only apply the Rabin-Karp algorithm. The previously used Naive and Knuth–Morris–Pratt algorithms remain for possible future use.
 
