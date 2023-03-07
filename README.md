@@ -4,6 +4,17 @@ An example of a passing solution to the final phase of the JetBrains Academy Jav
 
 ## Description
 
+This project is a command line application that scans a directory of files and compares the files against a list of patterns to identify the type of the files based on their contents.
+
+The project introduced several pattern matching algorithms. It started with a Naive approach, moved on to the Knuth–Morris–Pratt algorithm
+and then the Rabin–Karp algorithm.
+
+Over several phases, the project also increased the scale of the pattern matching being done. It started with a single pattern against a single file and finished with a list of patterns against a directory of files.
+
+The project introduced multithreading as a way to improve response times of the pattern matching being done. In the final version of the code, pattern matching is done using threads in a thread pool. They monitor and pull files to analyze from a queue loaded by the main program.
+
+## Notes
+
 The relative directory structure was kept the same as the one used in my JetBrains Academy solution.
 
 The program logs to a file called "analyzer.log" in your home folder.
@@ -11,6 +22,12 @@ The program logs to a file called "analyzer.log" in your home folder.
 The program uses two command line arguments:
 1. Path to a directory of files to analyze.
 2. Path to a file containing patterns to apply.
+
+It can be started with a command similar to the following:
+
+```
+java analyzer.Main ~/Temp ./resources/patterns.db
+```
 
 The patterns.db file in the resource directory was supplied by JetBrains Academy and provides an example of a pattern file.
 
